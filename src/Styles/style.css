@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+:root {
+  --manrope-font: Manrope, sans-serif;
+  --space-font: Space Mono, monospace;
+  --major-font: Major Mono Display, monospace;
+  --pixel-font: Pixelify Sans, cursive;
+  --font-color: #101010;
+  --small-font-color: rgb(25, 25, 25);
+  --small-text-color: rgba(16, 16, 16, 0.7);
+  --btn-color: rgb(25, 25, 25);
+  --transparent-color: rgb(236, 236, 236);
+  --btn-font-color: #FFFFFF;
+  --background: rgb(255, 255, 255);
+}
+
+[data-theme=dark] {
+  --font-color: #FFFFFF;
+  --small-font-color: #FFFFFF;
+  --small-text-color: #FFFFFF;
+  --btn-color: rgb(236, 236, 236);
+  --transparent-color: rgb(25, 25, 25);
+  --btn-font-color: #101010;
+  --background: #0a0a0a;
+}
+
+.app {
+  position: relative;
+  background: var(--background);
+  min-height: 100vh;
+  color: var(--font-color);
+  padding: 1.5rem 2.3rem;
+}
+
+.switch {
+  cursor: pointer;
+}
+.switch h2 {
+  font-family: var(--pixel-font);
+}
+
+.opened {
+  position: fixed;
+  z-index: 9999;
+  overflow-y: hidden;
+  background-color: var(--background);
+  font-family: var(--space-font);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+.opened .close {
+  width: 20px;
+}
+.opened div:first-child {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.opened .top {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+.opened .bottom {
+  margin-top: 40px;
+  display: flex;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+.opened img {
+  width: 27px;
+}
+
+.closed {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+a {
+  color: var(--small-font-color);
+  text-decoration: none;
+}
+a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--font-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+a:hover {
+  color: var(--font-color);
+}
+a:hover::before {
+  transform: scaleX(1);
+}
+
+.btn {
+  color: var(--btn-font-color);
+  background: var(--btn-color);
+  height: 50px;
+  font-family: var(--manrope-font);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner .logo {
+  font-family: var(--major-font);
+  font-size: 1.2rem;
+  position: relative;
+}
+.inner .logo span {
+  font-size: 0.5rem;
+  position: absolute;
+}
+.inner .logo-sec {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  color: var(--font-color);
+}
+.inner .logo-sec a {
+  color: var(--small-font-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.inner .logo-sec .about-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.inner .logo-sec .about-link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--font-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.inner .logo-sec .about-link:hover {
+  color: var(--font-color);
+}
+.inner .logo-sec .about-link:hover::before {
+  transform: scaleX(1);
+}
+.inner .links-nav img {
+  width: 30px;
+}
+.inner .links-nav .btns {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.inner .links-nav .btns ul {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.inner .menu {
+  width: 35px;
+}
+
+main .header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  margin-top: 50px;
+}
+main .header .inner-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+main .header .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+main .header .role {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  font-family: var(--pixel-font);
+}
+main .header .role-text {
+  font-family: var(--manrope-font);
+  font-size: 0.9rem;
+  color: var(--small-font-color);
+  font-weight: 700;
+  max-width: 500px;
+}
+main .header .role-text span {
+  color: var(--font-color);
+  text-decoration: underline;
+}
+main .header .tech {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+main .header .tech .stack {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-family: var(--space-font);
+}
+main .header .tech ul {
+  border-left: 2.5px solid var(--font-color);
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  padding-left: 10px;
+  font-family: var(--manrope-font);
+  font-weight: 500;
+  font-size: 0.85rem;
+  font-variant: small-caps;
+}
+main .header .btn {
+  margin-top: 10px;
+  width: 150px;
+}
+main .header .more {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1.5rem;
+}
+main .header .more .card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-family: var(--manrope-font);
+}
+main .header .more .card h3 {
+  font-size: 1.1rem;
+}
+main .header .more .card p {
+  font-size: 0.7em;
+  color: var(--small-text-color);
+  font-weight: 600;
+}
+main .header .more .card .heading {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+main .header .more .card .heading::after {
+  content: " ";
+  width: 100%;
+  background-color: var(--font-color);
+  height: 0.5px;
+}
+main .header .more .card img {
+  width: 30px;
+}
+main .projects .inner-projects {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+main .projects .project {
+  font-family: var(--manrope-font);
+}
+main .projects .project h3 {
+  font-size: 0.9rem;
+  word-wrap: nowrap;
+  text-transform: capitalize;
+}
+main .projects .project p {
+  color: var(--small-text-color);
+  font-weight: 600;
+  font-size: 0.6rem;
+}
+main .projects .project ul {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+  margin-top: 5px;
+}
+main .projects .project li {
+  background: var(--transparent-color);
+  font-family: var(--space-font);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 0.4rem 0.6rem;
+}
+main .projects .project .intro {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+main .projects .project .intro .intro-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+main .projects .project .intro .intro-text .intro-name a {
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
+}
+main .projects .project .intro .intro-text .intro-name a .arrow {
+  border: none;
+  width: 12px;
+  height: 12px;
+}
+main .projects .project .intro .intro-text .intro-name a:hover {
+  text-decoration: underline;
+}
+main .projects .project .intro .intro-text .intro-name a:hover .arrow {
+  transform: translateY(-2px);
+}
+main .projects .project img {
+  width: 80px;
+  border-radius: 5px;
+  border: 2px solid var(--transparent-color);
+}
+
+.about, .project-page {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70vh;
+  row-gap: 30px;
+  align-items: center;
+}
+.about h2, .project-page h2 {
+  font-family: var(--pixel-font);
+  font-size: 3.7rem;
+  text-transform: capitalize;
+}
+.about img, .project-page img {
+  width: 100px;
+}
+
+@media screen and (min-width: 530px) {
+  main .header .more {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+@media screen and (min-width: 620px) {
+  main .header .role {
+    font-size: 4.1rem;
+  }
+  main .header .more .card h3 {
+    font-size: 1.2rem;
+  }
+  main .header .more .card p {
+    font-size: 0.85em;
+  }
+  .projects .project p {
+    max-width: 400px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+}
+@media screen and (min-width: 750px) {
+  main .header .role {
+    font-size: 3.9rem;
+  }
+  main .header .more .card h3 {
+    font-size: 1.2rem;
+  }
+  main .header .more .card p {
+    font-size: 0.85em;
+  }
+  main .header .tech ul {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 800px) {
+  main .header .role {
+    font-size: 5.2rem;
+  }
+  main .header .projects .inner-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  main .header .projects .inner-projects p {
+    font-size: 0.67rem;
+  }
+}
+@media screen and (min-width: 1085px) {
+  .inner .logo {
+    font-size: 1.5rem;
+  }
+  .app {
+    padding: 2rem 3rem;
+  }
+  main .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+  main .header .role {
+    margin-top: 30px;
+    font-size: 3.5rem;
+  }
+  main .header .tech ul {
+    -moz-column-gap: 1.4rem;
+         column-gap: 1.4rem;
+    font-size: 1.2rem;
+  }
+  main .header .projects .inner-projects {
+    display: flex;
+    row-gap: 1.8rem;
+  }
+  main .header .projects .inner-projects h3 {
+    font-size: 1.1rem;
+  }
+  main .header .projects .inner-projects p {
+    font-size: 0.79rem;
+  }
+  main .header .more {
+    margin-top: 10px;
+  }
+  main .header .more .card {
+    row-gap: 0.4rem;
+  }
+  main .header .more .card h3 {
+    font-size: 1.3rem;
+  }
+  main .header .more .card p {
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */
