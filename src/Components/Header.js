@@ -2,6 +2,7 @@ import '../Styles/style.css'
 import artist from '../Images/artist.png'
 import development from '../Images/development.png'
 import arrow from '../Images/up-right-arrow (1).png'
+import resume from "../Images/resume2.pdf"
 function Header(){
 return(
     <div>
@@ -21,7 +22,7 @@ return(
                             </ul>
                         </div>
                        
-                        <a href={`mailto:${"estheratanang@gmail"}`} className="btn animate__animated animate__shakeY">Let's talk</a>
+                        <a href={resume} className="btn animate__animated animate__shakeY">Resume</a>
                     </div>
 
                     <div className="more">

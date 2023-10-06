@@ -19,11 +19,6 @@ const Navbar = ({onMode,onOpen,value, screenSize}) => {
       <div className="inner">
            <div className="logo-sec">
             <Link to="/"><h1 className='logo'>Esther<span>DEV</span></h1></Link>
-             {screenSize >= 1085 && <ul className='inner-links'>
-                <li><Link className='about-link' to="/about">About</Link></li>
-                <li><a className='about-link' href={resume}>Resume</a></li>
-                <li><Link className='about-link' to="/project">Project</Link></li>
-            </ul>}
         </div>
          <div className="links-nav">
             { screenSize < 1085 && <div onClick={onOpen}><img className='menu' src={value ? dark_menu : menu} alt="menu"/></div> } 
