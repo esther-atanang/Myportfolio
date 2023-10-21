@@ -13,7 +13,7 @@ import About from "./Components/About"
 import Error from "./Components/Error"
 import Project from "./Components/Project";
 import Home from "./Components/Home"
-import Resume from "./Images/resume2.pdf"
+import Resume from "./Images/esther's-final-resume.pdf"
 import {Link, Routes, Route} from "react-router-dom"
 function App() {
 const[mode, setMode] = useState(false)
