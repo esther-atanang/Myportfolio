@@ -2,7 +2,7 @@ import '../Styles/style.css'
 import artist from '../Images/artist.png'
 import development from '../Images/development.png'
 import arrow from '../Images/up-right-arrow (1).png'
-import resume from "../Images/resume2.pdf"
+import resume from "../Images/esther's-final-resume.pdf"
 function Header(){
 return(
     <div>

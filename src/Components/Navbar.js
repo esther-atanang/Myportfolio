@@ -4,7 +4,7 @@ import linkedin from '../Images/linkedin (1).png'
 import twitter from "../Images/twitter.png"
 import twitter_light from "../Images/twitter (1).png"
 import linkedin_light from "../Images/linkedin (3).png"
-import resume from '../Images/resume2.pdf'
+import resume from "../Images/esther's-final-resume.pdf"
 import menu from "../Images/menu (2).png"
 import dark_menu from "../Images/menu (3).png"
 import '../Styles/style.css'
